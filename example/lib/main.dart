@@ -30,9 +30,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class RelativeStackExample extends StatelessWidget {
+class RelativeStackExample extends StatefulWidget {
   const RelativeStackExample({super.key});
 
+  @override
+  State<RelativeStackExample> createState() => _RelativeStackExampleState();
+}
+
+class _RelativeStackExampleState extends State<RelativeStackExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,7 +109,7 @@ class RelativeStackExample extends StatelessWidget {
                   onTap: () {
                     print("tap: 4");
                   },
-                  child: ColoredBox(color: Colors.black),
+                  child: ColoredBox(color: Colors.purple),
                 ),
               ),
               RelativePositioned(
@@ -120,10 +125,37 @@ class RelativeStackExample extends StatelessWidget {
                   child: ColoredBox(color: Colors.grey),
                 ),
               ),
+              AnimatedRelative(
+                duration: const Duration(milliseconds: 500),
+                id: 6,
+                relativeTo: 1,
+                targetAnchor: _target,
+                followAnchor: _follower,
+                shift: _shift,
+                curve: Curves.easeInOutCirc,
+                preferSize: Size.square(50),
+                child: GestureDetector(
+                  onTap: _changePosition,
+                  child: const ColoredBox(color: Colors.black),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Alignment _target = Alignment.centerLeft;
+  Alignment _follower = Alignment.center;
+
+  Offset _shift = Offset.zero;
+
+  void _changePosition() {
+    print("tap 6");
+    _target = Alignment.centerRight;
+    _follower = Alignment.centerLeft;
+    _shift = const Offset(50, 10);
+    setState(() {});
   }
 }

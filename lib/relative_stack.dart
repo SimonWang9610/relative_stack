@@ -1,3 +1,4 @@
 library relative_stack;
 
-export 'src/widget.dart';
+export 'src/stack.dart';
+export 'src/relative_positioned.dart';
