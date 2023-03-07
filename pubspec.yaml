@@ -1,6 +1,6 @@
 name: relative_stack
 description: A widget that you could stack the children list by specifying their relative positions
-version: 0.0.1
+version: 0.0.2
 
 homepage: https://github.com/SimonWang9610/relative_stack
 repository: https://github.com/SimonWang9610/relative_stack
