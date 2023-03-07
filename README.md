@@ -11,14 +11,14 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+[![pub package](https://img.shields.io/pub/v/relative_stack?color=blue&style=plastic)](https://pub.dev/packages/relative_stack)
+[![GitHub Repo stars](https://img.shields.io/github/stars/SimonWang9610/relative_stack?color=black&logoColor=black&style=social)](https://github.com/SimonWang9610/relative_stack)
 
 ## Features
 
 You could use `RelativeStack` to position its children relative to you specify widget. (the specified widget is also one of the children list)
 
-<img src="./assets/relative_stack_demo.png">
+<img src="https://github.com/SimonWang9610/relative_stack/blob/main/assets/relative_stack_demo.png?raw=true">
 
 The below cod would stack its children:
 
