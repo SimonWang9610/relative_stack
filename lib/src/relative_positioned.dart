@@ -140,7 +140,6 @@ class _AnimatedRelativeState extends AnimatedWidgetBaseState<AnimatedRelative> {
   Widget build(BuildContext context) {
     final targetAnchor = _target?.evaluate(animation) ?? Alignment.topLeft;
     final followAnchor = _follower?.evaluate(animation) ?? Alignment.topLeft;
-    print("target: $targetAnchor, follow: $followAnchor");
 
     return RelativePositioned(
       id: widget.id,

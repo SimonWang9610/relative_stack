@@ -78,7 +78,6 @@ class RenderRelativeStack extends RenderBox
   /// Since all its relations are relative to itself, so we only need to translate them
   @override
   void performLayout() {
-    print("perform layout");
     _laidOutRelativeChildren = {};
     _relations = {};
 
